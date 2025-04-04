@@ -1,0 +1,26 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: SSA-1_ApplicationRegistrationService
+  datasource:
+    url: jdbc:mysql://localhost:3306/ish-db
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+ar:
+ ssa-web:
+  url: http://localhost:9095/ssa-web-api/find/{ssn}
+ state: california
+
+server:
+  port: 9096
