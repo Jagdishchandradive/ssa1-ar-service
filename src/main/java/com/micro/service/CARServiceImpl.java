@@ -102,6 +102,8 @@ public class CARServiceImpl implements ICitizenApplicationRegistrationService {
 			throw new RuntimeException("No response from external API or invalid state returned.");
 		}
 
+
+
 		// Register the citizen only if they belong to the target state
 		if (stateName.equalsIgnoreCase(targetState)) {
 			CitizenAppRegistrationEntity entity = new CitizenAppRegistrationEntity();
